@@ -65,17 +65,17 @@
       "image": "/images/dishes/pasta.jpg"
     },
     {
-      "id": "mint-mojito",
-      "name": "Mint Mojito",
-      "description": "Cool, refreshing mint cooler to pair with your meal.",
-      "price": "₹99",
+      "id": "mojito",
+      "name": "Mojito",
+      "description": "Cool, refreshing Mojito to pair with your meal.",
+      "price": "₹139",
       "tag": "Drink",
       "image": "/images/dishes/mint-mojito.jpg"
     },
     {
       "id": "Cold Coffee",
       "name": "Cold Coffee",
-      "description": "Cold coffee to pair with your meal.",
+      "description": "Cold coffee with ice cream to pair with your meal.",
       "price": "₹169",
       "tag": "Drink",
       "image": "/images/dishes/cold-coffee.jpg"

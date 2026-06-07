@@ -9,28 +9,12 @@
       "image": "/images/dishes/kurkure-momos.jpg"
     },
     {
-      "id": "momo-noodles",
-      "name": "Momo Noodles Combo",
-      "description": "Crispy fried momos with cheesy wok noodles and creamy chilli dips.",
-      "price": "₹199",
-      "tag": "Combo",
-      "image": "/images/dishes/momo-noodles.jpg"
-    },
-    {
       "id": "special-noodles",
-      "name": "Yo China Special Noodles",
+      "name": "Yo China Special Hakka Noodles",
       "description": "House signature wok-tossed noodles with secret spice blend.",
-      "price": "₹179",
+      "price": "₹220 F",
       "tag": "Signature",
       "image": "/images/dishes/speacial-noodles.jpg"
-    },
-    {
-      "id": "hakka-noodles",
-      "name": "Veg Hakka Noodles",
-      "description": "Classic street-style hakka with fresh vegetables and smoky wok heat.",
-      "price": "₹159",
-      "tag": "Popular",
-      "image": "/images/dishes/hakka-noodles.jpg"
     },
     {
       "id": "creamy-momos",
@@ -44,7 +28,7 @@
       "id": "manchurian-dry",
       "name": "Dry Manchurian",
       "description": "Crispy manchurian tossed in tangy, garlicky sauce.",
-      "price": "₹159",
+      "price": "₹149",
       "tag": "Chef's pick",
       "image": "/images/dishes/manchurian-dry.jpg"
     },
@@ -60,7 +44,7 @@
       "id": "chilli-potato",
       "name": "Chilli Potato",
       "description": "Crispy potatoes in sweet-spicy Indo-Chinese glaze.",
-      "price": "₹139",
+      "price": "₹149",
       "tag": "Starter",
       "image": "/images/dishes/chilli-potato.jpg"
     },
@@ -74,9 +58,9 @@
     },
     {
       "id": "pasta",
-      "name": "Veg Pasta",
+      "name": "White Sauce Pasta",
       "description": "Creamy veg pasta with herbs — a fusion favourite.",
-      "price": "₹189",
+      "price": "₹199",
       "tag": "Fusion",
       "image": "/images/dishes/pasta.jpg"
     },
@@ -87,6 +71,14 @@
       "price": "₹99",
       "tag": "Drink",
       "image": "/images/dishes/mint-mojito.jpg"
+    },
+    {
+      "id": "Cold Coffee",
+      "name": "Cold Coffee",
+      "description": "Cold coffee to pair with your meal.",
+      "price": "₹169",
+      "tag": "Drink",
+      "image": "/images/dishes/cold-coffee.jpg"
     }
   ],
   "interiorGallery": [

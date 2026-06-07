@@ -51,7 +51,7 @@ export function HomePage({
       <Header site={site} />
       <main className="overflow-x-hidden">
         <Hero site={site} openLabel={openLabel} reducedMotion={reducedMotion} />
-        <PopularDishes menu={menu} />
+        <PopularDishes menu={menu} site={site} />
         <ParallaxBand />
         <ReviewsSection reviews={reviews} />
         <InteriorShowcase menu={menu} />

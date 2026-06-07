@@ -142,7 +142,7 @@ export function Hero({
         aria-hidden
       />
 
-      <div className="mx-auto grid w-full max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
+      <div className="mx-auto grid w-full max-w-6xl items-center gap-16 md:gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
         <div className="relative z-10">
           <Badge variant="gold" className="mb-6" data-hero-cta>
             {openLabel}
@@ -191,7 +191,7 @@ export function Hero({
             </div>
           </div>
 
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-9 hidden md:flex flex-wrap gap-3">
             <Button asChild size="lg" data-hero-cta>
               <Link
                 href={site.zomatoUrl}

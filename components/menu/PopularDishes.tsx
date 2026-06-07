@@ -2,9 +2,12 @@
 
 import { SectionReveal } from "@/components/sections/SectionReveal";
 import { DishCard } from "@/components/menu/DishCard";
-import type { MenuData } from "@/lib/site";
+import type { MenuData, SiteData } from "@/lib/site";
+import { ArrowRight, ExternalLink} from "lucide-react";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
-export function PopularDishes({ menu }: { menu: MenuData }) {
+export function PopularDishes({ menu, site }: { menu: MenuData, site: SiteData }) {
   return (
     <SectionReveal id="dishes" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
@@ -22,6 +25,14 @@ export function PopularDishes({ menu }: { menu: MenuData }) {
           {menu.popular.map((dish) => (
             <DishCard key={dish.id} dish={dish} />
           ))}
+        </div>
+        <div className="flex justify-center">
+        <Button asChild variant="outline" size="sm" className="mt-10 md:mt-16">
+            <Link href={site.googleMapsMenuUrl} target="_blank" >
+              View All Dishes
+              <ArrowRight className="h-3.5 w-3.5" />
+            </Link>
+          </Button>  
         </div>
       </div>
     </SectionReveal>

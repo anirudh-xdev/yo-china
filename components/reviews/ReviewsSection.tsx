@@ -8,7 +8,7 @@ import { SectionReveal } from "@/components/sections/SectionReveal";
 import { ReviewSummary } from "@/components/reviews/ReviewSummary";
 import { ReviewCard } from "@/components/reviews/ReviewCard";
 import { registerGsapPlugins, gsap, useGSAP } from "@/lib/gsap-client";
-import type { ReviewsData } from "@/lib/reviews";
+import { getDisplayReviews, type ReviewsData } from "@/lib/reviews";
 
 registerGsapPlugins();
 
@@ -57,7 +57,7 @@ function ReviewsMarquee({ reviews }: { reviews: ReviewsData["items"] }) {
   );
 
   return (
-    <div ref={track} className="flex w-max gap-5">
+    <div ref={track} className="review-marquee-track flex w-max gap-5">
       {doubled.map((review, i) => (
         <ReviewCard key={`${review.id}-${i}`} review={review} />
       ))}
@@ -66,6 +66,8 @@ function ReviewsMarquee({ reviews }: { reviews: ReviewsData["items"] }) {
 }
 
 export function ReviewsSection({ reviews }: { reviews: ReviewsData }) {
+  const displayReviews = getDisplayReviews(reviews);
+
   return (
     <SectionReveal id="reviews" variant="blush" className="px-6 py-24">
       <div className="mx-auto max-w-6xl">
@@ -75,7 +77,8 @@ export function ReviewsSection({ reviews }: { reviews: ReviewsData }) {
             Google reviews
           </h2>
           <p className="mt-4 text-muted">
-            Real feedback from our guests — curated from Google Maps.
+            Top guest feedback from Google Maps — showing {displayReviews.length}{" "}
+            reviews rated 3 stars and above.
           </p>
         </div>
 
@@ -103,11 +106,11 @@ export function ReviewsSection({ reviews }: { reviews: ReviewsData }) {
             </Link>
           </Button>
         </div>
+      </div>
 
-        <div className="relative mt-12 overflow-hidden" data-reveal>
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-blush/40 to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-blush/40 to-transparent" />
-          <ReviewsMarquee reviews={reviews.items} />
+      <div className="review-marquee mt-14" data-reveal>
+        <div className="review-marquee-viewport overflow-x-hidden">
+          <ReviewsMarquee reviews={displayReviews} />
         </div>
       </div>
     </SectionReveal>

@@ -93,7 +93,7 @@ export function DishCard({ dish }: { dish: Dish }) {
           className="object-cover transition duration-700 group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, 25vw"
         />
-        <Badge className="absolute left-4 top-4" variant="gold">
+        <Badge className="absolute left-4 top-4 bg-white text-chili" >
           {dish.tag}
         </Badge>
       </div>

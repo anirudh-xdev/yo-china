@@ -9,6 +9,14 @@
       "image": "/images/dishes/kurkure-momos.jpg"
     },
     {
+      "id": "momo-noodles",
+      "name": "Momo Noodles Combo",
+      "description": "Crispy fried momos with cheesy wok noodles and creamy chilli dips.",
+      "price": "₹199",
+      "tag": "Combo",
+      "image": "/images/dishes/momo-noodles.jpg"
+    },
+    {
       "id": "special-noodles",
       "name": "Yo China Special Noodles",
       "description": "House signature wok-tossed noodles with secret spice blend.",
@@ -81,8 +89,98 @@
       "image": "/images/dishes/mint-mojito.jpg"
     }
   ],
-  "interior": {
-    "image": "/images/Interior.jpg",
-    "alt": "Yo China Modinagar restaurant interior"
-  }
+  "interiorGallery": [
+    {
+      "id": "main-hall",
+      "image": "/images/Interior.jpg",
+      "alt": "Yo China Modinagar dining hall with floral ceiling decor",
+      "width": 2584,
+      "height": 1452,
+      "featured": true
+    },
+    {
+      "id": "neon-sign",
+      "image": "/images/interior2.jpg",
+      "alt": "I Love Yo China neon sign on brick wall",
+      "width": 1242,
+      "height": 2208
+    },
+    {
+      "id": "mural-wall",
+      "image": "/images/interior3.jpg",
+      "alt": "Colourful cartoon mural — Better Food Better Mood",
+      "width": 1024,
+      "height": 575
+    },
+    {
+      "id": "gallery-wall",
+      "image": "/images/interior4.jpg",
+      "alt": "Gallery wall with food posters and pendant lights",
+      "width": 1024,
+      "height": 575
+    },
+    {
+      "id": "guest-wall",
+      "image": "/images/interior5.jpg",
+      "alt": "Guest signature wall and bar seating at Yo China",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "id": "ceiling-flowers",
+      "image": "/images/interior6.jpg",
+      "alt": "Hanging floral decor and cityscape pendant lamps",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "id": "dining-floor",
+      "image": "/images/interior7.jpg",
+      "alt": "Busy dining floor with star lights and warm ambience",
+      "width": 1024,
+      "height": 575
+    },
+    {
+      "id": "window-seating",
+      "image": "/images/interior8.jpg",
+      "alt": "Window-side seating with purple fairy lights at night",
+      "width": 1153,
+      "height": 2048
+    },
+    {
+      "id": "bar-counter",
+      "image": "/images/interior9.jpg",
+      "alt": "Fresh shakes and beverages prepared at the bar counter",
+      "width": 1024,
+      "height": 575
+    },
+    {
+      "id": "dining-neon",
+      "image": "/images/interior10.jpg",
+      "alt": "Dining area with glowing I Love Yo China wall sign",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "id": "poster-wall",
+      "image": "/images/interior11.jpg",
+      "alt": "Brick wall with pop-culture posters and pendant lights",
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "id": "guest-messages",
+      "image": "/images/interior12.jpg",
+      "alt": "Guest writing on the Yo China signature wall",
+      "width": 1024,
+      "height": 575
+    },
+    {
+      "id": "signature-hall",
+      "image": "/images/interior13.jpg",
+      "alt": "Wide view of the signature wall and dining hall",
+      "width": 1024,
+      "height": 768
+    }
+  ]
 }

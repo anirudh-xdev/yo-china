@@ -32,6 +32,8 @@ function useCountUp(target: number, duration = 1200, enabled = true) {
   return value;
 }
 
+const DISPLAY_STARS = ["5", "4", "3"] as const;
+
 export function ReviewSummary({ reviews }: { reviews: ReviewsData }) {
   const ref = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
@@ -52,17 +54,24 @@ export function ReviewSummary({ reviews }: { reviews: ReviewsData }) {
   const animatedRating = useCountUp(reviews.aggregate.rating, 1200, inView);
   const total = reviews.aggregate.total;
   const dist = reviews.distribution;
-  const maxCount = Math.max(...Object.values(dist));
+  const maxCount = Math.max(
+    ...DISPLAY_STARS.map((star) => dist[star])
+  );
 
   return (
-    <div
-      ref={ref}
-      className="surface-card rounded-3xl p-8 lg:p-10"
-      data-reveal
-    >
-      <div className="flex flex-col gap-8 sm:flex-row sm:items-center">
+    <div ref={ref} className="review-summary" data-reveal>
+      <div
+        className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gold/10 blur-3xl"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -bottom-12 -left-12 h-40 w-40 rounded-full bg-chili/5 blur-3xl"
+        aria-hidden
+      />
+
+      <div className="relative flex flex-col gap-8 sm:flex-row sm:items-center">
         <div className="text-center sm:text-left">
-          <p className="font-display text-6xl font-bold text-gold">
+          <p className="font-display text-6xl font-bold text-gold drop-shadow-sm">
             {animatedRating.toFixed(1)}
           </p>
           <Stars
@@ -75,19 +84,24 @@ export function ReviewSummary({ reviews }: { reviews: ReviewsData }) {
           </p>
         </div>
 
-        <div className="flex-1 space-y-2.5">
-          {(["5", "4", "3", "2", "1"] as const).map((star) => (
+        <div className="flex-1 space-y-3">
+          <p className="text-xs font-semibold uppercase tracking-wider text-muted">
+            Rating breakdown
+          </p>
+          {DISPLAY_STARS.map((star) => (
             <div key={star} className="flex items-center gap-3 text-sm">
-              <span className="w-3 font-medium text-muted">{star}</span>
-              <div className="h-2 flex-1 overflow-hidden rounded-full bg-surface-muted">
+              <span className="w-3 font-medium text-charcoal">{star}</span>
+              <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-surface-muted shadow-inner">
                 <div
-                  className="h-full rounded-full bg-gradient-to-r from-gold to-gold-light transition-all duration-1000"
+                  className="h-full rounded-full bg-gradient-to-r from-gold to-gold-light shadow-[0_0_12px_rgba(212,168,83,0.35)] transition-all duration-1000 ease-out"
                   style={{
                     width: inView ? `${(dist[star] / maxCount) * 100}%` : "0%",
                   }}
                 />
               </div>
-              <span className="w-8 text-right text-muted">{dist[star]}</span>
+              <span className="w-8 text-right font-medium text-muted">
+                {dist[star]}
+              </span>
             </div>
           ))}
         </div>

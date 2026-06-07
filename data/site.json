@@ -1,7 +1,13 @@
 {
   "name": "Yo China Modinagar",
-  "nameHindi": "यो चाइना मोदीनगर",
+  "nameHindi": "Yo China Modinagar",
   "tagline": "Chinese fast food with soul",
+  "heroImage": {
+    "src": "/images/hero/kurkure.jpg",
+    "alt": "Kurkure momos with creamy and chilli dips at Yo China Modinagar",
+    "width": 1024,
+    "height": 948
+  },
   "rating": 4.0,
   "reviewCount": 390,
   "priceRange": "₹200–400",

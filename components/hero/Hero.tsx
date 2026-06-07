@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { MapPin, Phone, Star, UtensilsCrossed } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -11,16 +11,6 @@ import { registerGsapPlugins, gsap, useGSAP, SplitText } from "@/lib/gsap-client
 import type { SiteData } from "@/lib/site";
 
 registerGsapPlugins();
-
-const Hero3D = dynamic(
-  () => import("@/components/hero/Hero3D").then((m) => m.Hero3D),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="h-full w-full rounded-[2rem] bg-gradient-to-br from-blush/60 via-surface to-sage/50" />
-    ),
-  }
-);
 
 export function Hero({
   site,
@@ -43,7 +33,7 @@ export function Hero({
       const body = root.current.querySelector("[data-hero-body]");
       const meta = root.current.querySelector("[data-hero-meta]");
       const ctas = root.current.querySelectorAll("[data-hero-cta]");
-      const canvasWrap = root.current.querySelector("[data-hero-canvas]");
+      const visualWrap = root.current.querySelector("[data-hero-visual]");
       const orbs = root.current.querySelectorAll("[data-hero-orb]");
 
       let split: SplitText | null = null;
@@ -93,14 +83,14 @@ export function Hero({
         );
       }
 
-      if (canvasWrap) {
+      if (visualWrap) {
         tl.from(
-          canvasWrap,
+          visualWrap,
           { scale: 0.94, opacity: 0, duration: 1, ease: "power2.out" },
           0.15
         );
 
-        gsap.to(canvasWrap, {
+        gsap.to(visualWrap, {
           y: -24,
           ease: "none",
           scrollTrigger: {
@@ -234,14 +224,20 @@ export function Hero({
         </div>
 
         <div
-          data-hero-canvas
-          className="relative mx-auto aspect-square w-full max-w-[min(100%,28rem)] lg:max-w-none"
+          data-hero-visual
+          className="relative mx-auto aspect-[4/5] w-full max-w-[min(100%,28rem)] sm:aspect-square lg:max-w-none"
         >
-          <div className="surface-card absolute inset-0 overflow-hidden rounded-[2rem]">
-            {!reducedMotion && <Hero3D />}
-            {reducedMotion && (
-              <div className="h-full w-full bg-gradient-to-br from-blush/50 via-surface to-sage/40" />
-            )}
+          <div className="surface-card group absolute inset-0 overflow-hidden rounded-[2rem]">
+            <Image
+              src={site.heroImage.src}
+              alt={site.heroImage.alt}
+              width={site.heroImage.width}
+              height={site.heroImage.height}
+              className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+              sizes="(max-width: 1024px) 90vw, 45vw"
+              priority
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-charcoal/20 via-transparent to-transparent" />
           </div>
           <div className="absolute -bottom-4 -left-4 surface-card rounded-2xl px-4 py-3 shadow-lg">
             <p className="text-xs font-medium uppercase tracking-wider text-chili">

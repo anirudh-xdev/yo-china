@@ -20,6 +20,14 @@ export type ReviewsData = {
   items: Review[];
 };
 
+export const MIN_DISPLAY_RATING = 3;
+
 export function getReviews(): ReviewsData {
   return reviewsData as ReviewsData;
+}
+
+export function getDisplayReviews(
+  data: ReviewsData = reviewsData as ReviewsData
+): Review[] {
+  return data.items.filter((review) => review.rating >= MIN_DISPLAY_RATING);
 }

@@ -1,7 +1,8 @@
-import type { Metadata, Viewport } from "next";
+import type { Viewport } from "next";
 import { Fraunces, Outfit, Noto_Sans_Devanagari } from "next/font/google";
 import { getSite } from "@/lib/site";
-import { getRestaurantJsonLd } from "@/lib/jsonld";
+import { getRestaurantJsonLd, getWebSiteJsonLd } from "@/lib/jsonld";
+import { getSiteMetadata } from "@/lib/metadata";
 import "./globals.css";
 
 const display = Fraunces({
@@ -22,56 +23,16 @@ const hindi = Noto_Sans_Devanagari({
   weight: ["400", "500"],
 });
 
-const site = getSite();
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://yochina-modinagar.vercel.app"),
-  title: {
-    default: `${site.name} | Chinese Fast Food`,
-    template: `%s | ${site.name}`,
-  },
-  description: `${site.tagline}. Kurkure momos, noodles & Chinese fast food in Modinagar. Dine-in, takeaway & delivery. ${site.rating}★ from ${site.reviewCount} Google reviews.`,
-  keywords: [
-    "Yo China Modinagar",
-    "Chinese food Modinagar",
-    "momos Modinagar",
-    "kurkure momos",
-    "noodles Modinagar",
-  ],
-  authors: [{ name: site.name }],
-  openGraph: {
-    type: "website",
-    locale: "en_IN",
-    url: "/",
-    siteName: site.name,
-    title: `${site.name} — ${site.nameHindi}`,
-    description: site.tagline,
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: site.name }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: site.name,
-    description: site.tagline,
-    images: ["/og-image.png"],
-  },
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "default",
-    title: "Yo China",
-  },
-  icons: {
-    icon: [
-      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: [{ url: "/icons/icon-192.png" }],
-  },
-};
+export const metadata = getSiteMetadata();
 
 export const viewport: Viewport = {
-  themeColor: "#faf7f2",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#faf7f2" },
+    { media: "(prefers-color-scheme: dark)", color: "#faf7f2" },
+  ],
   width: "device-width",
   initialScale: 1,
+  colorScheme: "light",
 };
 
 export default function RootLayout({
@@ -79,17 +40,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = getRestaurantJsonLd(site);
+  const site = getSite();
+  const restaurantJsonLd = getRestaurantJsonLd(site);
+  const webSiteJsonLd = getWebSiteJsonLd(site);
 
   return (
     <html
-      lang="en"
+      lang="en-IN"
       className={`${display.variable} ${body.variable} ${hindi.variable} h-full scroll-smooth`}
     >
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([restaurantJsonLd, webSiteJsonLd]),
+          }}
         />
       </head>
       <body className="min-h-full bg-background font-sans text-foreground antialiased">

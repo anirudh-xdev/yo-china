@@ -1,0 +1,28 @@
+{
+  "name": "Yo China Modinagar",
+  "nameHindi": "यो चाइना मोदीनगर",
+  "tagline": "Chinese fast food with soul",
+  "rating": 4.0,
+  "reviewCount": 390,
+  "priceRange": "₹200–400",
+  "cuisine": ["Chinese", "Fast Food", "Momos", "Noodles"],
+  "services": ["Dine-in", "Takeaway", "Delivery"],
+  "address": "Lower Bazar, near Modi Mandir, opp. Modi Bhawan, Modinagar, Uttar Pradesh 201204",
+  "phone": "08126306883",
+  "phoneDisplay": "081263 06883",
+  "hours": {
+    "open": 11,
+    "close": 23,
+    "timezone": "Asia/Kolkata"
+  },
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yo+China+Modinagar+Lower+Bazar+Modinagar",
+  "googleMapsMenuUrl": "https://www.google.com/maps/search/?api=1&query=Yo+China+Modinagar+Lower+Bazar+Modinagar",
+  "googleMapsEmbed": "https://maps.google.com/maps?q=Yo+China+Modinagar,+Lower+Bazar,+Modinagar,+Uttar+Pradesh+201204&output=embed",
+  "zomatoUrl": "https://www.zomato.com/modinagar/yo-china-modinagar-modi-bhawan/order",
+  "whatsappUrl": "https://wa.me/918126306883",
+  "lgbtqFriendly": true,
+  "geo": {
+    "latitude": 28.8322,
+    "longitude": 77.5734
+  }
+}

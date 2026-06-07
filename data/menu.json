@@ -1,0 +1,88 @@
+{
+  "popular": [
+    {
+      "id": "kurkure-momos",
+      "name": "Kurkure Momos",
+      "description": "Crispy golden momos with a fiery chutney dip — the crowd favourite.",
+      "price": "₹149",
+      "tag": "Bestseller",
+      "image": "/images/dishes/kurkure-momos.jpg"
+    },
+    {
+      "id": "special-noodles",
+      "name": "Yo China Special Noodles",
+      "description": "House signature wok-tossed noodles with secret spice blend.",
+      "price": "₹179",
+      "tag": "Signature",
+      "image": "/images/dishes/speacial-noodles.jpg"
+    },
+    {
+      "id": "hakka-noodles",
+      "name": "Veg Hakka Noodles",
+      "description": "Classic street-style hakka with fresh vegetables and smoky wok heat.",
+      "price": "₹159",
+      "tag": "Popular",
+      "image": "/images/dishes/hakka-noodles.jpg"
+    },
+    {
+      "id": "creamy-momos",
+      "name": "Creamy Momos",
+      "description": "Soft momos in a rich, creamy sauce — comfort in every bite.",
+      "price": "₹159",
+      "tag": "Must try",
+      "image": "/images/dishes/creamy-momos.jpg"
+    },
+    {
+      "id": "manchurian-dry",
+      "name": "Dry Manchurian",
+      "description": "Crispy manchurian tossed in tangy, garlicky sauce.",
+      "price": "₹159",
+      "tag": "Chef's pick",
+      "image": "/images/dishes/manchurian-dry.jpg"
+    },
+    {
+      "id": "chilli-garlic-noodles",
+      "name": "Chilli Garlic Noodles",
+      "description": "Bold wok heat with garlic and chilli — for spice lovers.",
+      "price": "₹169",
+      "tag": "Spicy",
+      "image": "/images/dishes/chilli-garlic-noodles.jpg"
+    },
+    {
+      "id": "chilli-potato",
+      "name": "Chilli Potato",
+      "description": "Crispy potatoes in sweet-spicy Indo-Chinese glaze.",
+      "price": "₹139",
+      "tag": "Starter",
+      "image": "/images/dishes/chilli-potato.jpg"
+    },
+    {
+      "id": "grilled-sandwich",
+      "name": "Grilled Sandwich",
+      "description": "Toasted, loaded, and perfect with a side of chutney.",
+      "price": "₹129",
+      "tag": "Snack",
+      "image": "/images/dishes/grilled-sandwich.jpg"
+    },
+    {
+      "id": "pasta",
+      "name": "Veg Pasta",
+      "description": "Creamy veg pasta with herbs — a fusion favourite.",
+      "price": "₹189",
+      "tag": "Fusion",
+      "image": "/images/dishes/pasta.jpg"
+    },
+    {
+      "id": "mint-mojito",
+      "name": "Mint Mojito",
+      "description": "Cool, refreshing mint cooler to pair with your meal.",
+      "price": "₹99",
+      "tag": "Drink",
+      "image": "/images/dishes/mint-mojito.jpg"
+    }
+  ],
+  "interior": {
+    "image": "/images/Interior.jpg",
+    "alt": "Yo China Modinagar restaurant interior"
+  }
+}

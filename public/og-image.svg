@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#0d0d0f"/>
+  <circle cx="200" cy="150" r="300" fill="#c41e3a" opacity="0.12"/>
+  <circle cx="1000" cy="500" r="250" fill="#d4a853" opacity="0.1"/>
+  <text x="80" y="280" fill="#f5f0e8" font-family="Georgia, serif" font-size="96" font-weight="bold">Yo China</text>
+  <text x="80" y="360" fill="#d4a853" font-family="system-ui" font-size="48">Modinagar</text>
+  <text x="80" y="430" fill="#ffffff" font-family="system-ui" font-size="28" opacity="0.5">Kurkure Momos � Special Noodles � 4.0</text>
+</svg>

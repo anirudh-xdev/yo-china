@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#16161a"/>
+  <ellipse cx="200" cy="170" rx="110" ry="50" fill="#1a1a1f" stroke="#d4a853" stroke-width="2" opacity="0.5"/>
+  <path d="M100 160 Q150 130 200 150 T300 155" stroke="#e8c47a" stroke-width="5" fill="none"/>
+  <path d="M110 175 Q160 145 210 165 T310 170" stroke="#d4a853" stroke-width="4" fill="none" opacity="0.8"/>
+  <circle cx="150" cy="140" r="8" fill="#4ade80" opacity="0.6"/>
+  <circle cx="230" cy="135" r="7" fill="#f87171" opacity="0.6"/>
+  <circle cx="270" cy="150" r="6" fill="#fbbf24" opacity="0.6"/>
+  <text x="200" y="260" text-anchor="middle" fill="#f5f0e8" font-family="system-ui" font-size="14" opacity="0.6">Veg Hakka Noodles</text>
+</svg>

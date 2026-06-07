@@ -1,26 +1,175 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf7f2;
+  --foreground: #1c1917;
+  --surface: #ffffff;
+  --surface-muted: #f3efe8;
+  --surface-elevated: #fffdfb;
+  --muted: #78716c;
+  --border: rgba(28, 25, 23, 0.08);
+  --charcoal: #1c1917;
+  --charcoal-light: #44403c;
+  --chili: #b91c3c;
+  --chili-light: #dc2626;
+  --gold: #a67c00;
+  --gold-light: #c9a227;
+  --cream: #faf7f2;
+  --blush: #fce8e4;
+  --sage: #e8f0e6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-chili: var(--chili);
+  --color-chili-light: var(--chili-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-cream: var(--cream);
+  --color-blush: var(--blush);
+  --color-sage: var(--sage);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-hindi: var(--font-hindi);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: color-mix(in srgb, var(--chili) 18%, white);
+  color: var(--charcoal);
+}
+
+.gradient-mesh {
+  background:
+    radial-gradient(ellipse 70% 55% at 8% 12%, rgba(252, 232, 228, 0.9), transparent 55%),
+    radial-gradient(ellipse 55% 45% at 92% 8%, rgba(232, 240, 230, 0.85), transparent 50%),
+    radial-gradient(ellipse 60% 50% at 50% 100%, rgba(201, 162, 39, 0.08), transparent 55%),
+    linear-gradient(180deg, #fffdfb 0%, var(--background) 45%, #f7f2ea 100%);
+}
+
+.text-gradient {
+  background: linear-gradient(
+    125deg,
+    var(--charcoal) 0%,
+    var(--chili) 42%,
+    var(--gold-light) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 1px 2px rgba(28, 25, 23, 0.04),
+    0 12px 40px rgba(28, 25, 23, 0.06);
+}
+
+.surface-card-hover {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.surface-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 2px 4px rgba(28, 25, 23, 0.05),
+    0 24px 48px rgba(28, 25, 23, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .surface-card-hover:hover {
+    transform: none;
+  }
+}
+
+.section-label {
+  letter-spacing: 0.22em;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--chili);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.dish-tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  perspective: 900px;
+}
+
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+.split-char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.split-word {
+  display: inline-block;
+  overflow: hidden;
 }

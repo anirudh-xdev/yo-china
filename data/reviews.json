@@ -1,0 +1,81 @@
+{
+  "aggregate": {
+    "rating": 4.0,
+    "total": 390,
+    "source": "Google"
+  },
+  "distribution": {
+    "5": 195,
+    "4": 98,
+    "3": 49,
+    "2": 29,
+    "1": 19
+  },
+  "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Yo+China+Modinagar+Lower+Bazar+Modinagar",
+  "items": [
+    {
+      "id": "1",
+      "author": "Ankit Kumar",
+      "rating": 5,
+      "text": "Visited Yo China in Modinagar recently and had a pretty good experience. The food was fresh and came out quickly. I tried the noodles and momos, and both tasted really good, especially the momos with their spicy chutney. The place is simple but comfortable.",
+      "relativeTime": "2 months ago",
+      "highlights": ["noodles", "momos"]
+    },
+    {
+      "id": "2",
+      "author": "Akshit Verma",
+      "rating": 5,
+      "text": "Amazing place to chill out. My most favourite dishes are kurkure momos and pizza in Yo China — loved it. Services are really good and they always ask for feedback — \"kaisa laga apko\" \"all good?\" This gesture is really sweet.",
+      "relativeTime": "2 years ago",
+      "highlights": ["kurkure momos", "pizza"]
+    },
+    {
+      "id": "3",
+      "author": "Shivani Singh",
+      "rating": 1,
+      "text": "I have been ordering from your restaurant for a long time, and I never expected this. Today, I found a hair in my pasta, which is completely unacceptable. This is very disappointing, and I hope you take this matter seriously and ensure proper hygiene in the future.",
+      "relativeTime": "7 months ago",
+      "highlights": ["pasta", "hygiene"]
+    },
+    {
+      "id": "4",
+      "author": "Google Reviewer",
+      "rating": 5,
+      "text": "Amazing food, great service, the ambience of the restaurant is also good. Perfect spot for a quick Chinese fix in Modinagar.",
+      "relativeTime": "Recent",
+      "highlights": ["ambience", "service"]
+    },
+    {
+      "id": "5",
+      "author": "Google Reviewer",
+      "rating": 5,
+      "text": "The atmosphere and vibe of the place is so good. Kurkure momos are a must-try — crispy outside, juicy inside. Will definitely come back.",
+      "relativeTime": "Recent",
+      "highlights": ["vibe", "kurkure momos"]
+    },
+    {
+      "id": "6",
+      "author": "Google Reviewer",
+      "rating": 2,
+      "text": "Very bad experience. Food is tasteless — money waste. Expected much better given the hype around this place.",
+      "relativeTime": "Recent",
+      "highlights": ["taste"]
+    },
+    {
+      "id": "7",
+      "author": "Local Guide",
+      "rating": 4,
+      "text": "Yo China Special Noodles are genuinely special — generous portion, good spice level. Delivery was on time and packaging was neat. Solid value for ₹200–400 range.",
+      "relativeTime": "3 months ago",
+      "highlights": ["special noodles", "delivery"]
+    },
+    {
+      "id": "8",
+      "author": "Regular Customer",
+      "rating": 5,
+      "text": "Best Chinese food in Modinagar hands down. Gravy Manchurian with fried rice is my go-to combo. Staff remembers regulars — feels like home.",
+      "relativeTime": "5 months ago",
+      "highlights": ["gravy manchurian", "fried rice"]
+    }
+  ]
+}

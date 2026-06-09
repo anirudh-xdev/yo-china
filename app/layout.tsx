@@ -1,4 +1,5 @@
 import type { Viewport } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { Fraunces, Outfit, Noto_Sans_Devanagari } from "next/font/google";
 import { getSite } from "@/lib/site";
 import { getRestaurantJsonLd, getWebSiteJsonLd } from "@/lib/jsonld";
@@ -59,6 +60,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full bg-background font-sans text-foreground antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
